@@ -1,3 +1,5 @@
+import {pipeline, env} from '@xenova/transformers';
+
 self.onmessage = async (event) => {
     switch (event.data.type) {
         case 'summarize':
@@ -16,7 +18,6 @@ let questionPipeline: any | null = null;
 let summaryPipeline: any | null = null;
 
 async function askQuestion(question: string, context: string) {
-    const { pipeline, env } = await import('@xenova/transformers');
 
     // @ts-ignore
     env.allowLocalModels = false;
@@ -35,7 +36,6 @@ async function askQuestion(question: string, context: string) {
 }
 
 async function summarize(context: string) {
-    const { pipeline, env } = await import('@xenova/transformers');
 
     // @ts-ignore
     env.allowLocalModels = false;

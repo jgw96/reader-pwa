@@ -8,6 +8,9 @@ export default defineConfig({
     sourcemap: true,
     assetsDir: "code",
     target: ["esnext", "edge100", "firefox100", "chrome100", "safari18"],
+    rollupOptions: {
+
+    }
   },
   plugins: [
     VitePWA({

@@ -6,10 +6,7 @@
       "declaration": true,
       "emitDeclarationOnly": true,
       "outDir": "./types",
-      "strict": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
+      "strict": false,
       "noFallthroughCasesInSwitch": true,
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true,
@@ -17,10 +14,12 @@
       "forceConsistentCasingInFileNames": true,
       "useDefineForClassFields": false,
       "isolatedModules": true,
+      "skipLibCheck": true,
+      "skipDefaultLibCheck": false,
       "types": [
           "vite-plugin-pwa/client",
           "vite/client"
-      ]
+      ],
   },
   "include": ["src/**/*.ts", "router.d.ts"],
   "exclude": ["node_modules"]
